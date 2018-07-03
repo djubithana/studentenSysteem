@@ -1,0 +1,47 @@
+.login-box{
+margin-top:120px;}
+.logo_login{
+margin:auto auto;
+display:block;
+}
+.inner-login-box{
+border: 6px solid #feff00;
+padding:20px;
+}
+.login-header{
+text-align:center;
+text-transform:uppercase;
+margin:17px 0px;
+color:#592681;}
+.inner-login-box{
+padding:40px 50px;}
+.inner-login-box input{
+margin-bottom:20px;}
+.school-btn-dark{
+    background: #592581;
+    color: #fff;
+    border: none!important;
+    padding: 6px 20px!important;}
+	.sidebar{
+	background:#592681;
+	height:100vh;
+	padding:20px 0px;
+	padding-left:0px!important;
+	padding-right:0px!important;
+	   min-height:100%;}
+	.sidebar ul li{list-style: none;
+	padding:10px 20px;text-align:center;background: #6d3c98;
+    margin: 5px;color:#fff;text-transform:uppercase;}
+		.sidebar ul li a{color:#fff;text-transform:uppercase; font-size: 14px;
+    letter-spacing: 1px;}
+		.sidebar ul li a:hover{text-decoration:none;}
+		.sidebar ul li:hover{background: #613788;text-decoration:none;}
+	.sidebar ul{padding-left:0px;margin-top:50px;}
+	.main{
+	background:#fff;
+	padding-left:0px!important;
+	padding-right:0px!important;
+	}
+	.header-jumbo{background-color: #6c3c98!important;border-radius:0px!important;}
+	.jumbotron-heading{color:#fff;text-transform: uppercase;
+    letter-spacing: 3px;}
