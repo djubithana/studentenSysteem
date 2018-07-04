@@ -16,6 +16,7 @@ public class Schooljaar implements Serializable{
 
     private Long schooljaar_id;
     private Year schooljaar;
+    private String status;
 
     private List<Klassen> klas = new ArrayList<Klassen>();
 
@@ -37,6 +38,15 @@ public class Schooljaar implements Serializable{
 
     public void setSchooljaar(Year schooljaar) {
         this.schooljaar = schooljaar;
+    }
+
+    @Column(name = "status", nullable = false)
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 
     @OneToMany(mappedBy = "schooljaar_id", fetch = FetchType.LAZY)

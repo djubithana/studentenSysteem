@@ -95,4 +95,54 @@ public class RechtenDAO {
         }
         return recht;
     }
+
+    public boolean updateRecht(Rechten recht) {
+
+        boolean isUpdated = false;
+
+        EntityManager manager = ENTITY_MANAGER_FACTORY.createEntityManager();
+        EntityTransaction transaction = null;
+
+        try {
+            transaction = manager.getTransaction();
+            transaction.begin();
+            manager.merge(recht);
+            transaction.commit();
+            isUpdated = true;
+        } catch (Exception ex) {
+            if (transaction != null) {
+                transaction.rollback();
+            }
+            ex.printStackTrace();
+            isUpdated = false;
+        } finally {
+            manager.close();
+        }
+
+        return isUpdated;
+    }
+
+    public boolean deleteRecht(Rechten recht) {
+        boolean isDeleted;
+
+        EntityManager manager = ENTITY_MANAGER_FACTORY.createEntityManager();
+        EntityTransaction transaction = null;
+
+        try {
+            transaction = manager.getTransaction();
+            transaction.begin();
+            manager.remove(manager.contains(recht) ? recht : manager.merge(recht));
+            transaction.commit();
+            isDeleted = true;
+        } catch (Exception ex) {
+            if (transaction != null) {
+                transaction.rollback();
+            }
+            ex.printStackTrace();
+            isDeleted = false;
+        } finally {
+            manager.close();
+        }
+        return isDeleted;
+    }
 }

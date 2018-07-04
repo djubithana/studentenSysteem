@@ -1,8 +1,11 @@
 package sr.havo1.webapp.studentenvolgsysteem.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -17,10 +20,12 @@ public class Docenten implements Serializable{
     private String voornaam;
     private String achternaam;
     private String email;
-    private String wachtwoord;
-    private Rollen rol_id;
+    private int telefoon;
+    private int mobiel;
 
+/*
     private List<Gebruikers> gebruiker = new ArrayList<Gebruikers>();
+*/
     private List<DocentenVakken> docentVak = new ArrayList<DocentenVakken>();
 
     @Id
@@ -61,34 +66,34 @@ public class Docenten implements Serializable{
         this.email = email;
     }
 
-    @Column(name = "wachtwoord", nullable = false)
-    public String getWachtwoord() {
-        return wachtwoord;
+    @Column(name = "telefoon", nullable = false)
+    public int getTelefoon() {
+        return telefoon;
     }
 
-    public void setWachtwoord(String wachtwoord) {
-        this.wachtwoord = wachtwoord;
+    public void setTelefoon(int telefoon) {
+        this.telefoon = telefoon;
     }
 
-    @ManyToOne
-    @JoinColumn(name = "rol_id")
-    public Rollen getRol_id() {
-        return rol_id;
+    @Column(name = "mobiel", nullable = false)
+    public int getMobiel() {
+        return mobiel;
     }
 
-    public void setRol_id(Rollen rol_id) {
-        this.rol_id = rol_id;
+    public void setMobiel(int mobiel) {
+        this.mobiel = mobiel;
     }
 
-    @OneToMany(mappedBy = "docent_id", fetch = FetchType.LAZY)
+    /*@OneToMany(mappedBy = "docent_id", fetch = FetchType.LAZY)
     public List<Gebruikers> getGebruiker() {
         return gebruiker;
     }
 
     public void setGebruiker(List<Gebruikers> gebruiker) {
         this.gebruiker = gebruiker;
-    }
+    }*/
 
+    @JsonIgnore
     @OneToMany(mappedBy = "docent_id", fetch = FetchType.LAZY)
     public List<DocentenVakken> getDocentVak() {
         return docentVak;

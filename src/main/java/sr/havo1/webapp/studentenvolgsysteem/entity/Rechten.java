@@ -16,7 +16,7 @@ public class Rechten implements Serializable{
     private Long recht_id;
     private String rechtnaam;
 
-    private List<Rollen> rol = new ArrayList<Rollen>();
+    private List<RollenRechten> rolRecht = new ArrayList<RollenRechten>();
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -39,11 +39,11 @@ public class Rechten implements Serializable{
     }
 
     @OneToMany(mappedBy = "recht_id", fetch = FetchType.LAZY)
-    public List<Rollen> getTaxidriver() {
-        return rol;
+    public List<RollenRechten> getRolRecht() {
+        return rolRecht;
     }
 
-    public void setTaxidriver(List<Rollen> taxidriver) {
-        this.rol = taxidriver;
+    public void setRolRecht(List<RollenRechten> rolRecht) {
+        this.rolRecht = rolRecht;
     }
 }

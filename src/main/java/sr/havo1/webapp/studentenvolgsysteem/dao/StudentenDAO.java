@@ -35,7 +35,19 @@ public class StudentenDAO {
             newStudent.setGeboorteplaats(student.getGeboorteplaats());
             newStudent.setDistrict(student.getDistrict());
             newStudent.setAdres(student.getAdres());
-            newStudent.setEmail(student.getEmail());
+            newStudent.setTelefoon(student.getTelefoon());
+            newStudent.setMedische_klachten(student.getMedische_klachten());
+            newStudent.setNaam_muloschool(student.getNaam_muloschool());
+            newStudent.setRichting_mulo(student.getRichting_mulo());
+            newStudent.setNaam_verzorger(student.getNaam_verzorger());
+            newStudent.setVerzorger_beroep(student.getVerzorger_beroep());
+            newStudent.setVerzorger_district(student.getVerzorger_district());
+            newStudent.setVerzorger_adres(student.getVerzorger_adres());
+            newStudent.setVerzorger_telefoon(student.getVerzorger_telefoon());
+            newStudent.setVerzorger_werkadres(student.getVerzorger_werkadres());
+            newStudent.setVerzorger_werktelefoon(student.getVerzorger_werktelefoon());
+            newStudent.setPakket_id(student.getPakket_id());
+            newStudent.setRelatie_id(student.getRelatie_id());
 
             // Save the object
             manager.persist(newStudent);

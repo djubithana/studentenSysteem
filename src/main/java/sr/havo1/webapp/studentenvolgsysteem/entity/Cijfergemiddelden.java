@@ -8,7 +8,7 @@ import java.io.Serializable;
  */
 
 @Entity
-@Table
+@Table(name = "cijfergemiddelden")
 public class Cijfergemiddelden implements Serializable{
 
     private Long cijfergemiddelde_id;

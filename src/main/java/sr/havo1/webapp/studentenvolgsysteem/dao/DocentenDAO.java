@@ -29,12 +29,11 @@ public class DocentenDAO {
             transaction.begin();
 
             // Create a new object
-            newDocent.setDocent_id(docent.getDocent_id());
             newDocent.setVoornaam(docent.getVoornaam());
             newDocent.setAchternaam(docent.getAchternaam());
             newDocent.setEmail(docent.getEmail());
-            newDocent.setWachtwoord(docent.getWachtwoord());
-            newDocent.setRol_id(docent.getRol_id());
+            newDocent.setTelefoon(docent.getTelefoon());
+            newDocent.setMobiel(docent.getMobiel());
 
             // Save the object
             manager.persist(newDocent);

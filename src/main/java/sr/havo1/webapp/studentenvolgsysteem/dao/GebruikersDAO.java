@@ -29,7 +29,13 @@ public class GebruikersDAO {
             transaction.begin();
 
             // Create a new object
-            newGebruiker.setDocent_id(gebruiker.getDocent_id());
+            newGebruiker.setVoornaam(gebruiker.getVoornaam());
+            newGebruiker.setAchternaam(gebruiker.getAchternaam());
+            newGebruiker.setEmail(gebruiker.getEmail());
+            newGebruiker.setWachtwoord(gebruiker.getWachtwoord());
+            newGebruiker.setRegistratiedatum(gebruiker.getRegistratiedatum());
+            newGebruiker.setLaatst_ingelogd_op(gebruiker.getLaatst_ingelogd_op());
+            newGebruiker.setRol_recht_id(gebruiker.getRol_recht_id());
 
             // Save the object
             manager.persist(newGebruiker);

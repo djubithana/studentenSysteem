@@ -2,6 +2,7 @@ package sr.havo1.webapp.studentenvolgsysteem.entity;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.Date;
 
 /**
  * Created by DENCIO on 6/11/2018.
@@ -13,6 +14,8 @@ public class Cijfers implements Serializable{
 
     private Long cijfer_id;
     private int cijfer;
+    private Date geplaatst_op;
+    private Date aangepast_op;
     private KlassenStudenten klas_student_id;
     private Repetities repetitie_id;
 
@@ -34,6 +37,24 @@ public class Cijfers implements Serializable{
 
     public void setCijfer(int cijfer) {
         this.cijfer = cijfer;
+    }
+
+    @Column(name = "geplaatst_op", nullable = false)
+    public Date getGeplaatst_op() {
+        return geplaatst_op;
+    }
+
+    public void setGeplaatst_op(Date geplaatst_op) {
+        this.geplaatst_op = geplaatst_op;
+    }
+
+    @Column(name = "aangepast_op", nullable = false)
+    public Date getAangepast_op() {
+        return aangepast_op;
+    }
+
+    public void setAangepast_op(Date aangepast_op) {
+        this.aangepast_op = aangepast_op;
     }
 
     @ManyToOne

@@ -19,6 +19,8 @@ public class Vakken implements Serializable{
 
     private List<DocentenVakken> docentVak = new ArrayList<DocentenVakken>();
     private List<Cijfergemiddelden> cijfergemiddelde = new ArrayList<Cijfergemiddelden>();
+    private List<Keuzevakken> keuzevak = new ArrayList<Keuzevakken>();
+
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -65,5 +67,14 @@ public class Vakken implements Serializable{
 
     public void setCijfergemiddelde(List<Cijfergemiddelden> cijfergemiddelde) {
         this.cijfergemiddelde = cijfergemiddelde;
+    }
+
+    @OneToMany(mappedBy = "vak_id", fetch = FetchType.LAZY)
+    public List<Keuzevakken> getKeuzevak() {
+        return keuzevak;
+    }
+
+    public void setKeuzevak(List<Keuzevakken> keuzevak) {
+        this.keuzevak = keuzevak;
     }
 }
