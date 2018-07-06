@@ -23,25 +23,47 @@ margin-bottom:20px;}
     border: none!important;
     padding: 6px 20px!important;}
 	.sidebar{
-	background:#592681;
+	background:#29004c;
 	height:100vh;
 	padding:20px 0px;
 	padding-left:0px!important;
 	padding-right:0px!important;
 	   min-height:100%;}
 	.sidebar ul li{list-style: none;
-	padding:10px 20px;text-align:center;background: #6d3c98;
+	padding:10px 20px;background: #381963;
     margin: 5px;color:#fff;text-transform:uppercase;}
 		.sidebar ul li a{color:#fff;text-transform:uppercase; font-size: 14px;
     letter-spacing: 1px;}
+    .menu-icon{margin-right:5px;}
 		.sidebar ul li a:hover{text-decoration:none;}
 		.sidebar ul li:hover{background: #613788;text-decoration:none;}
 	.sidebar ul{padding-left:0px;margin-top:50px;}
 	.main{
-	background:#fff;
+	background:#f8f9fa;
 	padding-left:0px!important;
 	padding-right:0px!important;
 	}
-	.header-jumbo{background-color: #6c3c98!important;border-radius:0px!important;}
-	.jumbotron-heading{color:#fff;text-transform: uppercase;
+	.header-jumbo{background-color: #fdfdfd!important;
+    border-radius: 0px!important;
+    margin: 1rem!important;}
+	.jumbotron-heading{color:#2b134c;text-transform: uppercase;
     letter-spacing: 3px;}
+    button.btn_dark_bg{
+        background: #2b134c;
+        padding: 8px 20px;
+        color: #fff;
+        margin-top: 8px;
+    }
+    button.btn_dark_bg:focus{border-color:#fff;}
+    .btn_tabel{display: inline-block;
+    background: none;
+    margin-right: 5px;
+    padding: 4px 15px;}
+    .content{margin: 1rem!important;
+    padding: 2rem 3rem;
+    background: #fdfdfd;}
+    .left_box{float:left;}
+    .dashoard_box{    padding: 20px 30px;;
+    background: #e1e4e6;
+    color: #fdfdfd;
+    border-radius: 40px;}
