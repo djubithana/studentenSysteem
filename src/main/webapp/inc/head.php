@@ -9,6 +9,8 @@
 
     <!-- Styles -->
     <link href="css/style.css" rel="stylesheet">
+    <link href="css/all.css" rel="stylesheet">
+     <link href="css/fontawesome.css" rel="stylesheet">
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/bootstrap-grid.min.css" rel="stylesheet">
 </head>
