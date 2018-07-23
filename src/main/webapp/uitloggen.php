@@ -6,7 +6,7 @@
                                  			<section class="jumbotron text-center header-jumbo">
                                  				<div class="container">
                                  					<h4 class="jumbotron-heading">Pagina Titel Komt hier</h4>
-                                 					<button class="btn_dark_bg">Toevoegen</button>
+
                                  				</div>
                                  			</section>
                                  			<div class="content">
